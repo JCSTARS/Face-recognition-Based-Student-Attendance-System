@@ -1,0 +1,109 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recognition Results</title>
+</head>
+<body>
+    <h1>Recognition Results</h1>
+
+    <h2>Annotated image</h2>
+    <div>
+        {% for img_path in result_images %}
+        <div>
+            <img src="{{ img_path }}" alt="Result Image" style="width: 500px; margin: 10px;">
+        </div>
+        {% endfor %}
+    </div>
+
+    <h2>Attendance statistics</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Attendance</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for label, count in label_counts.items() %}
+            <tr>
+                <td>{{ label }}</td>
+                <td>{{ count }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="/">Return to upload page</a>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recognition Results</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+            color: darkblue;
+        }
+        h2 {
+            margin-top: 10px;
+            color: darkblue;
+        }
+        .result-image img {
+            width: 100%;
+            border-radius: 10px;
+            border: 2px solid #dee2e6;
+        }
+        table {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><strong> Recognition Results </strong></h1>
+        <h2><br> Annotated images</h2>
+        <div class="row">
+            {% for img_path in result_images %}
+            <div class="col-md-6 result-image">
+                <img src="{{ img_path }}" alt="Result Image">
+            </div>
+            {% endfor %}
+        </div>
+
+        <h2>Attendance statistics</h2>
+        <table class="table table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Student Name</th>
+                    <th>Attendance</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for label, count in label_counts.items() %}
+                <tr>
+                    <td>{{ label }}</td>
+                    <td>{{ count }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="text-center mt-4">
+            <a href="/" class="btn btn-primary">Return to upload page</a>
+        </div>
+    </div>
+</body>
+</html>
