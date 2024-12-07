@@ -33,6 +33,12 @@ First, upload the images of each person to ``` target-face ``` directory.
 
 After running app.py, the front end should be activate on port 5000 at 127.0.0.1(host), then upload the images and press 'upload' buttom. The time and corresponding face should be annotated and added up then.
 
+An illustration of the system ⬇️
+
+
+<img src="./examples/page2.png" alt="Alt text" style="width:50%;"/>
+<img src="./examples/page3.png" alt="Alt text" style="width:50%;"/>
+<img src="./examples/page4.png" alt="Alt text" style="width:50%;"/>
 ## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). See the [LICENSE](https://github.com/JCSTARS/Face-recognition-Based-Student-Attendance-System/blob/main/LICENSE) file for details.
